@@ -1,8 +1,8 @@
 .article {
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 45px;
     list-style: none;
     margin: unset;
     padding: unset;

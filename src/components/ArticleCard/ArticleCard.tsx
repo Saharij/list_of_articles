@@ -52,7 +52,7 @@ export const ArticleCard: React.FC<Props> = ({
   return (
     <Card
       id="card"
-      sx={{ maxWidth: 400, height: 530, marginBottom: 5.625 }}
+      sx={{ maxWidth: 400, height: 530 }}
     >
       <CardMedia
         component="img"
