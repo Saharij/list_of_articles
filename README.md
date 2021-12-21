@@ -12,4 +12,4 @@ The priority of fields: (1) names; and (2) description. The article with one mat
 
 The matched keywords should be highlighted with yellow color.
 
-I used these technologies: `React`, `React Hooks`, `TypeScript`, `Fetch`, `Material UI`, `SCSS`, `NPM`.
+I used these technologies: `React`, `React Hooks`, `TypeScript`, `Redux`, `Redux-thunk`, `Fetch`, `Material UI`, `SCSS`, `NPM`.
