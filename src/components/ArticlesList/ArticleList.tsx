@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "@mui/material";
+import { useSelector, useDispatch } from "react-redux";
 
 import './ArticleList.scss';
 import { FindArticle } from "../FindArticle/FindArticle";
-import { Article } from '../../dataTypes';
-import { getArticles } from '../../api/api';
 import { ArticleCard } from "../ArticleCard/ArticleCard";
+import { fetchArticles, articlesData } from "../../store";
 
 export const ArticleList: React.FC = () => {
-  const [articles, setArticles] = useState<Article[] | []>([]);
   const [inputValue, setInputValue] = useState<string>('');
+  const dispatch = useDispatch();
+  const articles = useSelector(articlesData);
 
   const filteredArticles = articles.filter(({ title, summary}) => (
     title.toLowerCase().includes(inputValue.toLowerCase().trim()) || summary.toLowerCase().includes(inputValue.toLowerCase().trim())
   ));
 
   useEffect(() => {
-    getArticles()
-      .then(response => {
-        setArticles(response)
-      })
+    dispatch(fetchArticles())
   }, [])
 
   return (
